@@ -8,16 +8,12 @@ import router from './router'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-// Importing firebase and config for it
-// import firebase from 'firebase'
-// import config from '../config/keys'
-
 // Importing store which is created by Vuex
 import store from './store'
 
-import './components/firebaseInit'
+import VueLodash from 'vue-lodash'
 
-// firebase.initializeApp(config);
+Vue.use(VueLodash);
 
 Vue.use(Element)
 

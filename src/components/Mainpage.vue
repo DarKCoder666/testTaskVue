@@ -1,18 +1,12 @@
 <template>
     <div class="mainpage">
-        <h1 class="mainTitle">Good Morning, sir.</h1>
-        <p>Log in first, to see the companies and their contracts.</p>
+        <h1 class="mainTitle">Good Morning.</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'mainpage',
-        data() {
-            return {
-                title: "HELLO WORLD!"
-            }
-        }
+        name: 'mainpage'
     }
 </script>
 

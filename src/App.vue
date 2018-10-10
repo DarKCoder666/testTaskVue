@@ -3,15 +3,7 @@
     <div class="navbar">
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
         <el-menu-item index="/">Home</el-menu-item>
-        
-        <template v-if="$store.state.loggedIn">
-          <el-menu-item index="/companies">Companies</el-menu-item>
-          <el-menu-item index="/logout">Logout</el-menu-item>
-        </template>
-        <template v-else>
-          <el-menu-item index="/signin">Sign In</el-menu-item>
-          <el-menu-item index="/signup">Sign Up</el-menu-item>
-        </template>
+        <el-menu-item index="/companies">Companies</el-menu-item>
       </el-menu>
     </div>
 
@@ -20,8 +12,6 @@
 </template>
 
 <script>
-  import firebase from 'firebase';
-
   export default {
     name: 'App',
     data() {
@@ -30,15 +20,15 @@
       }
     },
     mounted() {
-      this.$store.commit('initCompaniesListener');
+      this.$store.commit('loadCompaniesList');
     }
   }
-
 </script>
 
 <style>
   body {
     margin: 0;
+    overflow: hidden;
   }
 
   #app {
